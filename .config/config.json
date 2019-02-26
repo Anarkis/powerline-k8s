@@ -1,0 +1,13 @@
+{
+  "segments": [
+    "virtual_env",
+    "username",
+    "/Users/luis/git/powerline-k8s/powerline-k8s/k8s-context.py",
+    "ssh",
+    "cwd",
+    "git",
+    "hg",
+    "jobs",
+    "root"
+  ]
+}
