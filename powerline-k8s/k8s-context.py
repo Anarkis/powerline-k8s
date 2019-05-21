@@ -3,8 +3,9 @@ import subprocess
 
 
 class Segment(BasicSegment):
-    fg_color = 15       # White color
-    bg_color = 208      # Orange color
+    fg_color = 15           # White color
+    bg_color = 208          # Orange color
+    bg_color_error = 124    # Red3 color
 
     """
     Add_to_powerline
@@ -15,6 +16,6 @@ class Segment(BasicSegment):
         process = subprocess.Popen(k8s_context_command.split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         output, error = process.communicate()
         if error:
-            self.powerline.append(" " + "*" + " ", self.fg_color, self.bg_color)
+            self.powerline.append(" " + "*" + " ", self.fg_color, self.bg_color_error)
         else:
             self.powerline.append(" " + output.decode().replace("\n", "") + " ", self.fg_color, self.bg_color)
